@@ -38,8 +38,9 @@
             this.sobelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laplacianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cannyParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.sobelParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
+            this.laplacianParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
@@ -68,14 +69,14 @@
             // open
             // 
             this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(224, 26);
+            this.open.Size = new System.Drawing.Size(128, 26);
             this.open.Text = "Open";
             this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(224, 26);
+            this.exit.Size = new System.Drawing.Size(128, 26);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -86,7 +87,8 @@
             this.sobelToolStripMenuItem,
             this.laplacianToolStripMenuItem,
             this.cannyParametersToolStripMenuItem,
-            this.sobelParametersToolStripMenuItem});
+            this.sobelParametersToolStripMenuItem,
+            this.laplacianParametersToolStripMenuItem});
             this.edgeToolStripMenuItem.Name = "edgeToolStripMenuItem";
             this.edgeToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.edgeToolStripMenuItem.Text = "Edge";
@@ -94,30 +96,37 @@
             // cannyToolStripMenuItem
             // 
             this.cannyToolStripMenuItem.Name = "cannyToolStripMenuItem";
-            this.cannyToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cannyToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.cannyToolStripMenuItem.Text = "Canny";
             this.cannyToolStripMenuItem.Click += new System.EventHandler(this.cannyToolStripMenuItem_Click);
             // 
             // sobelToolStripMenuItem
             // 
             this.sobelToolStripMenuItem.Name = "sobelToolStripMenuItem";
-            this.sobelToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sobelToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.sobelToolStripMenuItem.Text = "Sobel";
             this.sobelToolStripMenuItem.Click += new System.EventHandler(this.sobelToolStripMenuItem_Click);
             // 
             // laplacianToolStripMenuItem
             // 
             this.laplacianToolStripMenuItem.Name = "laplacianToolStripMenuItem";
-            this.laplacianToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.laplacianToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.laplacianToolStripMenuItem.Text = "Laplacian";
             this.laplacianToolStripMenuItem.Click += new System.EventHandler(this.laplacianToolStripMenuItem_Click);
             // 
             // cannyParametersToolStripMenuItem
             // 
             this.cannyParametersToolStripMenuItem.Name = "cannyParametersToolStripMenuItem";
-            this.cannyParametersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cannyParametersToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
             this.cannyParametersToolStripMenuItem.Text = "Canny Parameters";
             this.cannyParametersToolStripMenuItem.Click += new System.EventHandler(this.cannyParametersToolStripMenuItem_Click);
+            // 
+            // sobelParametersToolStripMenuItem
+            // 
+            this.sobelParametersToolStripMenuItem.Name = "sobelParametersToolStripMenuItem";
+            this.sobelParametersToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.sobelParametersToolStripMenuItem.Text = "Sobel Parameters";
+            this.sobelParametersToolStripMenuItem.Click += new System.EventHandler(this.sobelParametersToolStripMenuItem_Click);
             // 
             // imageBox1
             // 
@@ -128,12 +137,12 @@
             this.imageBox1.TabIndex = 2;
             this.imageBox1.TabStop = false;
             // 
-            // sobelParametersToolStripMenuItem
+            // laplacianParametersToolStripMenuItem
             // 
-            this.sobelParametersToolStripMenuItem.Name = "sobelParametersToolStripMenuItem";
-            this.sobelParametersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.sobelParametersToolStripMenuItem.Text = "Sobel Parameters";
-            this.sobelParametersToolStripMenuItem.Click += new System.EventHandler(this.sobelParametersToolStripMenuItem_Click);
+            this.laplacianParametersToolStripMenuItem.Name = "laplacianParametersToolStripMenuItem";
+            this.laplacianParametersToolStripMenuItem.Size = new System.Drawing.Size(232, 26);
+            this.laplacianParametersToolStripMenuItem.Text = "Laplacian Parameters";
+            this.laplacianParametersToolStripMenuItem.Click += new System.EventHandler(this.laplacianParametersToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -166,5 +175,6 @@
         private Emgu.CV.UI.ImageBox imageBox1;
         private ToolStripMenuItem cannyParametersToolStripMenuItem;
         private ToolStripMenuItem sobelParametersToolStripMenuItem;
+        private ToolStripMenuItem laplacianParametersToolStripMenuItem;
     }
 }

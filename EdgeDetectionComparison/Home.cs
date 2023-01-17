@@ -71,6 +71,11 @@ namespace EdgeDetectionComparison
 
         private void laplacianToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ApplyLaplacian();
+        }
+
+        public void ApplyLaplacian(int appertureSize = 3)
+        {
             if (_imageInput == null)
             {
                 return;
@@ -79,7 +84,7 @@ namespace EdgeDetectionComparison
             Image<Gray, byte> imageGrey = _imageInput.Convert<Gray, byte>();
             Image<Gray, float> imageLaplacian = new(_imageInput.Width, _imageInput.Height, new Gray(0));
 
-            imageLaplacian = imageGrey.Laplace(3);
+            imageLaplacian = imageGrey.Laplace(appertureSize);
             imageBox1.Image = imageLaplacian.Convert<Gray, byte>();
         }
 
@@ -95,6 +100,13 @@ namespace EdgeDetectionComparison
             SobelParameters sobelParameters = new SobelParameters(this);
             sobelParameters.StartPosition = FormStartPosition.CenterParent;
             sobelParameters.Show();
+        }
+
+        private void laplacianParametersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LaplacianParameters laplacianParameters = new LaplacianParameters(this);
+            laplacianParameters.StartPosition = FormStartPosition.CenterParent;
+            laplacianParameters.Show();
         }
     }
 }
