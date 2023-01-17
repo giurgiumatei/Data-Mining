@@ -52,7 +52,11 @@ namespace EdgeDetectionComparison
 
         private void sobelToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            ApplySobel();
+        }
 
+        public void ApplySobel(int xOrder = 1, int yOrder = 1, int apertureSize = 3)
+        {
             if (_imageInput == null)
             {
                 return;
@@ -60,8 +64,8 @@ namespace EdgeDetectionComparison
 
             Image<Gray, byte> imageGrey = _imageInput.Convert<Gray, byte>();
             Image<Gray, float> imageSobel = new(_imageInput.Width, _imageInput.Height, new Gray(0));
-            
-            imageSobel = imageGrey.Sobel(1, 1, 3);
+
+            imageSobel = imageGrey.Sobel(xOrder, yOrder, apertureSize);
             imageBox1.Image = imageSobel.Convert<Gray, byte>();
         }
 
@@ -84,6 +88,13 @@ namespace EdgeDetectionComparison
             CannyParameters cannyParameters = new CannyParameters(this);
             cannyParameters.StartPosition = FormStartPosition.CenterParent;
             cannyParameters.Show();
+        }
+
+        private void sobelParametersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SobelParameters sobelParameters = new SobelParameters(this);
+            sobelParameters.StartPosition = FormStartPosition.CenterParent;
+            sobelParameters.Show();
         }
     }
 }

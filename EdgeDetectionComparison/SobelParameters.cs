@@ -10,16 +10,16 @@ using System.Windows.Forms;
 
 namespace EdgeDetectionComparison
 {
-    public partial class CannyParameters : Form
+    public partial class SobelParameters : Form
     {
         private Home _home;
 
-        public CannyParameters()
+        public SobelParameters()
         {
             InitializeComponent();
         }
 
-        public CannyParameters(Home home)
+        public SobelParameters(Home home)
         {
             InitializeComponent();
             _home = home;
@@ -34,9 +34,10 @@ namespace EdgeDetectionComparison
         {
             if (_home != null)
             {
-                _home.ApplyCanny(
-                    (double)numericThreshold.Value, 
-                    (double)numericThresholdLink.Value);
+                _home.ApplySobel(
+                    (int) numericXOrder.Value, 
+                    (int) numericYOrder.Value, 
+                    (int) numericAperture.Value);
             }
         }
     }

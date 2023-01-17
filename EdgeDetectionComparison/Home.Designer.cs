@@ -37,8 +37,9 @@
             this.cannyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sobelToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.laplacianToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.imageBox1 = new Emgu.CV.UI.ImageBox();
             this.cannyParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.imageBox1 = new Emgu.CV.UI.ImageBox();
+            this.sobelParametersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.imageBox1)).BeginInit();
             this.SuspendLayout();
@@ -67,14 +68,14 @@
             // open
             // 
             this.open.Name = "open";
-            this.open.Size = new System.Drawing.Size(128, 26);
+            this.open.Size = new System.Drawing.Size(224, 26);
             this.open.Text = "Open";
             this.open.Click += new System.EventHandler(this.open_Click);
             // 
             // exit
             // 
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(128, 26);
+            this.exit.Size = new System.Drawing.Size(224, 26);
             this.exit.Text = "Exit";
             this.exit.Click += new System.EventHandler(this.exit_Click);
             // 
@@ -84,7 +85,8 @@
             this.cannyToolStripMenuItem,
             this.sobelToolStripMenuItem,
             this.laplacianToolStripMenuItem,
-            this.cannyParametersToolStripMenuItem});
+            this.cannyParametersToolStripMenuItem,
+            this.sobelParametersToolStripMenuItem});
             this.edgeToolStripMenuItem.Name = "edgeToolStripMenuItem";
             this.edgeToolStripMenuItem.Size = new System.Drawing.Size(57, 24);
             this.edgeToolStripMenuItem.Text = "Edge";
@@ -110,6 +112,13 @@
             this.laplacianToolStripMenuItem.Text = "Laplacian";
             this.laplacianToolStripMenuItem.Click += new System.EventHandler(this.laplacianToolStripMenuItem_Click);
             // 
+            // cannyParametersToolStripMenuItem
+            // 
+            this.cannyParametersToolStripMenuItem.Name = "cannyParametersToolStripMenuItem";
+            this.cannyParametersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.cannyParametersToolStripMenuItem.Text = "Canny Parameters";
+            this.cannyParametersToolStripMenuItem.Click += new System.EventHandler(this.cannyParametersToolStripMenuItem_Click);
+            // 
             // imageBox1
             // 
             this.imageBox1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -119,12 +128,12 @@
             this.imageBox1.TabIndex = 2;
             this.imageBox1.TabStop = false;
             // 
-            // cannyParametersToolStripMenuItem
+            // sobelParametersToolStripMenuItem
             // 
-            this.cannyParametersToolStripMenuItem.Name = "cannyParametersToolStripMenuItem";
-            this.cannyParametersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.cannyParametersToolStripMenuItem.Text = "Canny Parameters";
-            this.cannyParametersToolStripMenuItem.Click += new System.EventHandler(this.cannyParametersToolStripMenuItem_Click);
+            this.sobelParametersToolStripMenuItem.Name = "sobelParametersToolStripMenuItem";
+            this.sobelParametersToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.sobelParametersToolStripMenuItem.Text = "Sobel Parameters";
+            this.sobelParametersToolStripMenuItem.Click += new System.EventHandler(this.sobelParametersToolStripMenuItem_Click);
             // 
             // Home
             // 
@@ -156,5 +165,6 @@
         private ToolStripMenuItem laplacianToolStripMenuItem;
         private Emgu.CV.UI.ImageBox imageBox1;
         private ToolStripMenuItem cannyParametersToolStripMenuItem;
+        private ToolStripMenuItem sobelParametersToolStripMenuItem;
     }
 }
